@@ -20,7 +20,8 @@ class SpiderTuCarro(scrapy.Spider):
         'FEED_URI': 'carros.csv',
         'FEED_FORMAT': 'csv',
         'FEED_EXPORT_ENCODING': 'utf-8',
-        'USER_AGENT': 'Cudeiro'
+        'USER_AGENT': 'Cudeiro',
+        'DUPEFILTER_CLASS' : 'scrapy.dupefilters.BaseDupeFilter'
     }
 
     def parse(self, response):
